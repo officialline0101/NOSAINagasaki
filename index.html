@@ -122,19 +122,20 @@
             font-weight: bold;
         }
 
-.label {
-    display: block;
-    margin-bottom: 10px;
-    padding: 3px 3px 3px 18px; /* ←左側のpaddingを少し増やす（左:8px） */
-    font-weight: 600;
-    background-color: #00a583;
-    color: white;
-    border-radius: 6px;
-    font-size: 18px;
-        text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        .label {
+            display: block;
+            margin-bottom: 10px;
+            padding: 3px 3px 3px 18px;
+            /* ←左側のpaddingを少し増やす（左:8px） */
+            font-weight: 600;
+            background-color: #00a583;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
         input[type="text"],
         input[type="tel"],
@@ -499,110 +500,117 @@
         }
 
         .menu-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-}
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
 
-.menu-buttons button {
-  width: 100%;
-  box-sizing: border-box; /* パディングやボーダーを含めて100%にするため */
-  padding: 12px; /* ボタン内の余白（お好みで） */
-  font-size: 16px; /* 見やすく調整 */
-}
+        .menu-buttons button {
+            width: 100%;
+            box-sizing: border-box;
+            /* パディングやボーダーを含めて100%にするため */
+            padding: 12px;
+            /* ボタン内の余白（お好みで） */
+            font-size: 16px;
+            /* 見やすく調整 */
+        }
 
-/* 全体的なフォーム要素の統一スタイル */
-.form-group {
-  margin-bottom: 20px;
-}
+        /* 全体的なフォーム要素の統一スタイル */
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-/* カスタムセレクト */
-.custom-select {
-  width: 100%;
-  padding: 12px 14px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='16' height='10' viewBox='0 0 16 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23666' d='M1 1l7 7 7-7' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 12px 8px;
-}
+        /* カスタムセレクト */
+        .custom-select {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='16' height='10' viewBox='0 0 16 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23666' d='M1 1l7 7 7-7' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 12px 8px;
+        }
 
-/* フォーカス時の視認性 */
-.custom-select:focus {
-  border-color: #0078d7;
-  box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.2);
-  outline: none;
-}
+        /* フォーカス時の視認性 */
+        .custom-select:focus {
+            border-color: #0078d7;
+            box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.2);
+            outline: none;
+        }
 
-/* モバイル対応 */
-@media (max-width: 600px) {
-  .custom-select {
-    font-size: 18px;
-    padding: 14px;
-  }
+        /* モバイル対応 */
+        @media (max-width: 600px) {
+            .custom-select {
+                font-size: 18px;
+                padding: 14px;
+            }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>長崎県農業共済組合<br>アンケートフォーム</h1>
-<div class="info-text">
-  <span style="color: red;">以下全て入力後【アンケート送信】ボタンを押してください。</span><br>
-  <div style="text-align: center;">※必須項目は記入をお願い致します。</div>
-</div>
-<div class="label">
-  <span style="border-bottom: 2px solid red;">お名前をご記入下さい。</span>
-  <span class="required">必須</span>
-</div>
+        <div class="info-text">
+            <span style="color: red;">以下全て入力後【アンケート送信】ボタンを押してください。</span><br>
+            <div style="text-align: center;">※必須項目は記入をお願い致します。</div>
+        </div>
+        <div class="label">
+            <span style="border-bottom: 2px solid red;">お名前をご記入下さい。</span>
+            <span class="required">必須</span>
+        </div>
         <textarea id="message" rows="1" placeholder="ご記入下さい"></textarea> <!-- メッセージ入力フィールド -->
 
         <div class="label">
-            <span style="border-bottom: 2px solid red;">お電話番号をご記入下さい。</span><span class="required">必須</span></div>
+            <span style="border-bottom: 2px solid red;">お電話番号をご記入下さい。</span><span class="required">必須</span>
+        </div>
         <input type="tel" id="message2" placeholder="電話番号を入力してください" pattern="\d{10,11,12}" inputmode="tel">
 
-<div class="form-group">
-  <label for="message3" class="label">
-    <span style="border-bottom: 2px solid red;">お住まいの市町をご選択ください</span>
-    <span class="required">必須</span>
-  </label>
+        <div class="form-group">
+            <label for="message3" class="label">
+                <span style="border-bottom: 2px solid red;">お住まいの市町をご選択ください</span>
+                <span class="required">必須</span>
+            </label>
             <select id="message3" class="custom-select" required>
-              <option value="" disabled selected>選択してください</option>
-              <option value="長崎市">長崎市</option>
-            <option value="佐世保市">佐世保市</option>
-            <option value="島原市">島原市</option>
-            <option value="諫早市">諫早市</option>
-            <option value="大村市">大村市</option>
-            <option value="平戸市">平戸市</option>
-            <option value="松浦市">松浦市</option>
-            <option value="対馬市">対馬市</option>
-            <option value="壱岐市">壱岐市</option>
-            <option value="五島市">五島市</option>
-            <option value="西海市">西海市</option>
-            <option value="雲仙市">雲仙市</option>
-            <option value="南島原市">南島原市</option>
-            <option value="長与町">長与町</option>
-            <option value="時津町">時津町</option>
-            <option value="東彼杵町">東彼杵町</option>
-            <option value="川棚町">川棚町</option>
-            <option value="波佐見町">波佐見町</option>
-            <option value="小値賀町">小値賀町</option>
-            <option value="佐々町">佐々町</option>
-            <option value="新上五島町">新上五島町</option>
+                <option value="" disabled selected>選択してください</option>
+                <option value="長崎市">長崎市</option>
+                <option value="佐世保市">佐世保市</option>
+                <option value="島原市">島原市</option>
+                <option value="諫早市">諫早市</option>
+                <option value="大村市">大村市</option>
+                <option value="平戸市">平戸市</option>
+                <option value="松浦市">松浦市</option>
+                <option value="対馬市">対馬市</option>
+                <option value="壱岐市">壱岐市</option>
+                <option value="五島市">五島市</option>
+                <option value="西海市">西海市</option>
+                <option value="雲仙市">雲仙市</option>
+                <option value="南島原市">南島原市</option>
+                <option value="長与町">長与町</option>
+                <option value="時津町">時津町</option>
+                <option value="東彼杵町">東彼杵町</option>
+                <option value="川棚町">川棚町</option>
+                <option value="波佐見町">波佐見町</option>
+                <option value="小値賀町">小値賀町</option>
+                <option value="佐々町">佐々町</option>
+                <option value="新上五島町">新上五島町</option>
             </select>
-          </div>                 
+        </div>
 
         <div class="label">組合員コードをご記入下さい【任意】</div>
         <textarea id="message4" rows="1" placeholder="ご記入下さい【任意】"></textarea> <!-- メッセージ入力フィールド -->
+
+        <div class="label">収入保険加入者の方<br>加入者管理コード（13ケタ）</div>
+        <textarea id="message5" rows="1" placeholder="ご記入下さい"></textarea>
 
         <div class="label">加入している、（もしくは気になっている）<br>共済事業の種類【任意】</div>
         <div class="menu-buttons">
@@ -668,12 +676,14 @@
             const message2 = document.getElementById('message2').value;
             const message3 = document.getElementById('message3').value;
             const message4 = document.getElementById('message4').value;
+            const message5 = document.getElementById('message5').value;
 
             const formData = {
                 message,
                 message2,
                 message3,
                 message4,
+                message5,
                 menuCount: menuCount.join('\n・') // 改行区切りにする
             };
 
@@ -696,6 +706,12 @@
             }
 
             // フォームデータのチェック
+            if (!formData.message4) {
+                alert('電話番号を入力してください。');
+                return;
+            }
+
+            // フォームデータのチェック
             if (!formData.menuCount) {
                 alert('加入している、（もしくは気になっている）共済事業の種類をご選択ください。');
                 return;
@@ -704,7 +720,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【電話番号】\n・${formData.message2}\n\n【お住まい】\n・${formData.message3}\n\n【組合員コード】\n・${formData.message4}\n\n【共済事業の種類】\n・${formData.menuCount}`
+                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【電話番号】\n・${formData.message2}\n\n【お住まい】\n・${formData.message3}\n\n【組合員コード】\n・${formData.message4}\n\n【加入者管理コード】\n・${formData.message5}\n\n【共済事業の種類】\n・${formData.menuCount}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('アンケートご記入ありがとうございます。');
