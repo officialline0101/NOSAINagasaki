@@ -554,6 +554,7 @@
                 font-size: 18px;
                 padding: 14px;
             }
+        }
     </style>
 </head>
 
@@ -621,11 +622,11 @@
             <button type="button" id="fivemenu" onclick="selectmenu(this)">果樹共済</button>
             <button type="button" id="sixmenu" onclick="selectmenu(this)">畑作物共済</button>
             <button type="button" id="sevenmenu" onclick="selectmenu(this)">農機具共済</button>
-            <button type="button" id="sevenmenu" onclick="selectmenu(this)">建物共済</button>
+            <button type="button" id="eightmenu" onclick="selectmenu(this)">建物共済</button>
         </div>
 
         <div class="info-text">※ご記入いただいた内容は情報発信に活用させて頂きます。</div>
-        <button class="submit-button" onclick="submitForm()" div id="section-message">アンケート送信</button>
+        <button class="submit-button" onclick="submitForm()" id="section-message">アンケート送信</button>
     </div>
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> <!-- LIFF SDKの読み込み -->
@@ -686,36 +687,6 @@
                 message5,
                 menuCount: menuCount.join('\n・') // 改行区切りにする
             };
-
-            // フォームデータのチェック
-            if (!formData.message) {
-                alert('ご来店日を入力してください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.message2) {
-                alert('お名前を入力してください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.message3) {
-                alert('生年月日を入力してください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.message4) {
-                alert('電話番号を入力してください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.menuCount) {
-                alert('加入している、（もしくは気になっている）共済事業の種類をご選択ください。');
-                return;
-            }
 
             // LINEトークにメッセージを送信
             liff.sendMessages([{
